@@ -134,7 +134,7 @@ h1 {
   font-family: 'Lora', Georgia, serif;
   font-style: italic;
   font-weight: 600;
-  font-size: clamp(2.1rem, 5vw, 3.1rem);
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
   line-height: 1.1;
   letter-spacing: -0.025em;
   margin-bottom: 20px;
