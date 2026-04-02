@@ -2,31 +2,33 @@
 
 /* ─── TOKENS ───────────────────────────────────────────────────── */
 :root {
-  /* Light Mode */
-  --bg:       #f5f4f0;   /* warm off-white, paper-like          */
-  --text:     #1c1917;   /* warm near-black                     */
-  --body:     #57534e;   /* medium warm gray                    */
-  --muted:    #a8a29e;   /* light warm gray                     */
-  --line:     #e5e2de;   /* subtle warm divider                 */
-  --line-mid: #ccc9c5;   /* slightly stronger                   */
-  --blue:     #2d4a7a;   /* deep scholar blue — links           */
-  --blue-hov: #1e3558;
-  --surface:  #ffffff;   /* card backgrounds                    */
+  /* Light Mode - Quiet Luxury */
+  --bg:       #fefefe;   /* nearly pure white                  */
+  --text:     #0d0d0d;   /* almost pure black                  */
+  --body:     #525252;   /* neutral gray                       */
+  --muted:    #8f8f8f;   /* subtle gray                        */
+  --line:     #e0e0e0;   /* minimalist divider                 */
+  --line-mid: #d0d0d0;   /* slightly stronger                  */
+  --blue:     #1a1a2e;   /* deep sophisticated blue            */
+  --blue-hov: #0f0f1e;
+  --accent:   #6b7280;   /* elegant stone gray accent          */
+  --surface:  #ffffff;   /* pure white cards                   */
   
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg:       #0f0f0f;   /* dark background                     */
-    --text:     #e4e2df;   /* light text                          */
-    --body:     #b0aca7;   /* medium light gray                   */
-    --muted:    #6b6662;   /* muted gray                          */
-    --line:     #2a2824;   /* subtle divider                      */
-    --line-mid: #3d3832;   /* slightly stronger                   */
-    --blue:     #5a8fd6;   /* lighter scholar blue for dark mode  */
-    --blue-hov: #7aa3e5;
-    --surface:  #1a1a1a;   /* card backgrounds                    */
+    --bg:       #0f0f0f;   /* deep black                         */
+    --text:     #e0e0e0;   /* soft white                         */
+    --body:     #a8a8a8;   /* warm neutral gray                  */
+    --muted:    #6a6a6a;   /* subtle gray                        */
+    --line:     #1a1a1a;   /* minimal divider                    */
+    --line-mid: #252525;   /* slightly stronger                  */
+    --blue:     #8b9dc3;   /* muted elegant blue                 */
+    --blue-hov: #a8b8d8;
+    --accent:   #9ca3af;   /* elegant stone gray                 */
+    --surface:  #0a0a0a;   /* deep black cards                   */
     
     color-scheme: dark;
   }
@@ -34,27 +36,29 @@
 
 [data-theme="dark"] {
   --bg:       #0f0f0f;
-  --text:     #e4e2df;
-  --body:     #b0aca7;
-  --muted:    #6b6662;
-  --line:     #2a2824;
-  --line-mid: #3d3832;
-  --blue:     #5a8fd6;
-  --blue-hov: #7aa3e5;
-  --surface:  #1a1a1a;
+  --text:     #e0e0e0;
+  --body:     #a8a8a8;
+  --muted:    #6a6a6a;
+  --line:     #1a1a1a;
+  --line-mid: #252525;
+  --blue:     #8b9dc3;
+  --blue-hov: #a8b8d8;
+  --accent:   #9ca3af;
+  --surface:  #0a0a0a;
   
   color-scheme: dark;
 }
 
 [data-theme="light"] {
-  --bg:       #f5f4f0;
-  --text:     #1c1917;
-  --body:     #57534e;
-  --muted:    #a8a29e;
-  --line:     #e5e2de;
-  --line-mid: #ccc9c5;
-  --blue:     #2d4a7a;
-  --blue-hov: #1e3558;
+  --bg:       #fefefe;
+  --text:     #0d0d0d;
+  --body:     #525252;
+  --muted:    #8f8f8f;
+  --line:     #e0e0e0;
+  --line-mid: #d0d0d0;
+  --blue:     #1a1a2e;
+  --blue-hov: #0f0f1e;
+  --accent:   #6b7280;
   --surface:  #ffffff;
   
   color-scheme: light;
@@ -75,8 +79,8 @@ body {
 }
 
 /* ─── LINKS ─────────────────────────────────────────────────────── */
-a                        { color: var(--blue); text-decoration: none; }
-a:hover, a:focus-visible { color: var(--blue-hov); text-decoration: underline; }
+a                        { color: var(--blue); text-decoration: none; transition: color 140ms; }
+a:hover, a:focus-visible { color: var(--muted); text-decoration: underline; }
 .link-muted              { color: var(--muted); }
 
 /* ─── SHELL ─────────────────────────────────────────────────────── */
@@ -106,7 +110,10 @@ a:hover, a:focus-visible { color: var(--blue-hov); text-decoration: underline; }
   letter-spacing: -0.01em;
   transition: color 150ms;
 }
-.brand:hover { color: var(--blue); text-decoration: none; }
+.brand:hover { 
+  color: var(--blue);
+  text-decoration: none; 
+}
 
 .nav { display: flex; flex-wrap: wrap; gap: 2px; align-items: center; }
 .nav a {
@@ -152,7 +159,7 @@ a:hover, a:focus-visible { color: var(--blue-hov); text-decoration: underline; }
 .theme-toggle:hover {
   color: var(--text);
   border-color: var(--blue);
-  background: rgba(45, 74, 122, 0.04);
+  background: rgba(0,0,0,0.04);
 }
 
 .theme-toggle:focus-visible {
@@ -262,15 +269,7 @@ p         { color: var(--body); }
 .lede + .lede { margin-top: 12px; }
 .muted { color: var(--muted); }
 
-/* ─── RESEARCH TAGS ─────────────────────────────────────────────── */
-.chip-row {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 18px;
-  row-gap: 8px;
-  margin-top: 24px;
-}
-/* Each chip: plain text tag with a subtle underline — no pill, no bg */
+/* ─── CHIP ACCENTS ──────────────────────────────────────────────── */
 .chip {
   font-size: 0.80rem;
   font-weight: 400;
@@ -278,6 +277,12 @@ p         { color: var(--body); }
   border-bottom: 1px solid var(--line-mid);
   padding-bottom: 2px;
   line-height: 1;
+  transition: color 150ms, border-color 150ms;
+}
+
+.chip:hover {
+  color: var(--blue);
+  border-bottom-color: var(--blue);
 }
 
 /* ─── PROFILE PHOTO ─────────────────────────────────────────────── */
@@ -287,11 +292,12 @@ p         { color: var(--body); }
   height: 140px;
   border-radius: 50%;
   background-image: url('figures/xiaodong.jpg');
-  background-size: 300%;        /* lower % = more zoomed out */
-  background-position: 70% 6%; /* x: slightly left of center; y: near top */
+  background-size: 300%;
+  background-position: 70% 6%;
   background-repeat: no-repeat;
   margin-bottom: 28px;
   filter: saturate(0.92) contrast(1.02);
+  border: 2px solid var(--line);
 }
 
 /* ─── META DL ────────────────────────────────────────────────────── */
@@ -393,9 +399,9 @@ p         { color: var(--body); }
   transition: border-left-color 130ms, color 130ms, background 130ms;
 }
 .pub-entry:hover {
-  border-left-color: var(--blue);
+  border-left-color: var(--accent);
   color: var(--text);
-  background: rgba(45, 74, 122, 0.05);
+  background: rgba(0,0,0,0.025);
 }
 
 /* ─── CATEGORY HEADER ───────────────────────────────────────────── */
