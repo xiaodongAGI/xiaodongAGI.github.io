@@ -404,6 +404,36 @@ p         { color: var(--body); }
   background: rgba(0,0,0,0.025);
 }
 
+.pub-tag {
+  display: inline-block;
+  padding: 0.08rem 0.48rem;
+  margin: 0 0.08rem;
+  border: 1px solid var(--line-mid);
+  border-radius: 999px;
+  font-size: 0.77rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.35;
+  vertical-align: baseline;
+  color: var(--text);
+  background: rgba(0,0,0,0.04);
+}
+
+.pub-tag--journal {
+  border-color: rgba(26, 26, 46, 0.18);
+  background: rgba(26, 26, 46, 0.08);
+}
+
+.pub-tag--oral {
+  border-color: rgba(107, 114, 128, 0.22);
+  background: rgba(107, 114, 128, 0.10);
+}
+
+.pub-tag--award {
+  border-color: rgba(184, 134, 11, 0.28);
+  background: rgba(184, 134, 11, 0.11);
+}
+
 /* ─── CATEGORY HEADER ───────────────────────────────────────────── */
 .cat-header {
   font-size: 0.68rem;
