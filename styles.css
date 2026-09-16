@@ -446,6 +446,14 @@ p         { color: var(--body); }
 }
 .cat-header:first-child { margin-top: 0; }
 
+.cat-note {
+  margin: -4px 0 12px;
+  max-width: 42rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
 /* ─── CONTACT LIST ──────────────────────────────────────────────── */
 .contact-list { padding: 0; list-style: none; }
 .contact-list li {
